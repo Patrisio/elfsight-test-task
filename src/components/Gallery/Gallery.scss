@@ -1,0 +1,21 @@
+.photos {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  justify-content: center;
+
+  &__item {
+    border: 3px solid transparent;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover .photos__content {
+      transform: scale(1.2);
+    }
+  }
+
+  &__content {
+    transition: .3s all;
+  }
+}

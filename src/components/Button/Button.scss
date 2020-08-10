@@ -1,0 +1,26 @@
+.lightbox__btn {
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  background: none;
+  border: 1px solid transparent;
+  opacity: 0.8;
+  outline: none;
+  margin: 2px 2px;
+  padding: 0 0;
+  -webkit-tap-highlight-color: #ffffff00;
+
+  &--light {
+    fill: #fff;
+  }
+
+  &--dark {
+    fill: #000;
+  }
+
+  &:hover {
+    opacity: 1;
+    transition: opacity 200ms ease;
+  }
+}

@@ -1,0 +1,104 @@
+.list {
+  color: #000;
+  max-width: max-content;
+  list-style: none;
+
+  &-users > .list__item {
+    border: 1px solid #000;
+    align-items: center;
+    display: flex;
+
+    & .list__item-content {
+      & .list__item-title {
+        display: flex;
+        justify-content: center;
+        margin: 15px;
+      }
+    }
+
+    & > .list__item-link {
+      display: flex;
+      width: 100%;
+      text-decoration: none;
+      color: #000;
+
+      & > .list__item-order {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #000;
+        padding: 10px;
+        width: 35px;
+        text-align: center;
+      }
+    }
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background: rgba(0,0,0,.2);
+    }
+  }
+
+  &-albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-left: 0;
+
+    & > .list__item {
+      display: flex;
+      position: relative;
+      background: #fff;
+      border-radius: 48px;
+      padding: 10px;
+      width: 375px;
+      height: 165px;
+      margin-bottom: 20px;
+      transition: .3s all;
+      
+      &:hover {
+        transform: scale(.95);
+      }
+
+      & > .list__item-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #677B8F;
+        
+        & > .list__item-content {
+          flex-direction: column;
+          max-width: 210px;
+
+          & > .list__item-title {
+            text-transform: uppercase;
+          }
+        }
+
+        & > .list__item-order {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          background: #F3F4F7;
+          border-radius: 50px;
+          box-shadow: -2px -1px 17px rgba(0, 0, 0, 0.2);
+        }
+  
+        & > .list__item-cover {
+          width: 88px;
+          height: 88px;
+          border-radius: 24px;
+          margin: 0 30px;
+        }
+      }
+    }
+  }
+}
